@@ -1,0 +1,135 @@
+<html>
+  <head>
+
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  </head>   
+  <body>
+<div data-role="page" id="home">
+      <div data-role="header" data-theme="b">
+        <h1>Advanced Software Engineering Midterm </h1>
+      </div>   
+	  <div data-role="navbar" data-theme="a">
+	  <ul>
+	  <li><a href="#home"  data-role="button" >HOME</a></li>
+	  <li><a href="#know" data-role="button">Know More</a></li>
+	  </ul></div>
+	<div data-role="content" data-theme="">
+        <h2 align="center" id="head">ASE Hackathon</h2>
+		<div class="ui-grid-b">
+		<div class="ui-block-a" data-theme="c">
+		</div>
+		<div class="ui-block-b" data-theme="c">
+		<a href="#createmap"  data-role="button" >Create Map</a>
+		<a href="#choosemap"  data-role="button" >Choose a Map</a>
+		<a href="#createmap"  data-role="button" >Trace a Route</a>
+		</div>
+		<div class="ui-block-c" data-theme="c">
+		</div>
+		</div>
+	  </div>   
+	</div>	 
+</div> 
+<div data-role="page" id="know">
+	<div data-role="header" data-theme="b">
+		<h2> Get all Comments of the Applications Here<h2>
+	</div>
+		<div data-role="navbar" data-theme="b">
+		<ul>
+		<li><a href="#home"  data-role="button" >HOME</a></li>
+		<li><a href="#know" data-role="button">Know More</a></li>
+		</ul></div>
+	<div data-role="content">
+	
+	<div id="write"></div>
+	</div>
+</div>
+<div data-role="page" id="createmap">
+	<div data-role="header"  data-theme="b">
+	<a href="#home" data-icon="home" >Home</a>
+	<h1>Create a Map</h1>
+	</div>
+		<div data-role="content" data-theme="">
+		<h2 align="center"> Get Started With a Map</h2>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b">
+				Select a Map: <input type="file" name="img" id="map" accept="pictures">
+				<button onclick="submitmap()">Submit</button>
+				</div>
+				<div class="ui-block-c"></div>
+			</div>
+		</div>
+		<script>
+		function submitmap()
+		{
+		
+		var umap=document.getElementById("map").value;
+		WcfService2.WebService.sendDataToMySql(umap);
+		window.location("#checkin");
+        }
+		</script>
+</div>		
+<div data-role="page" id="checkin">
+	<div data-role="header"  data-theme="b">
+	<a href="#home" data-icon="home" >Home</a>
+	<h1>You are on the Move</h3>
+	</div>
+		<div data-role="content">
+			<div class="ui-grid-b">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b">
+				Use Your Camera to take the Picture:<input type="file" accept="image/*" capture="camera">
+				<h3 align="center">Enter a Description</h3>
+				<input type="text" id="disc">
+				<h3 align="center">Enter the Price</h3>
+				<input type="text" id="price">
+				<a href="" data-role="button" id="enterdata">Check In</a>
+				<br><br>
+				<h3 align="center" Have
+				</br></br>
+				<button data-theme="b"  class="custom" data-role="button" onclick="redirect()">Done</button>
+				<script>
+				function redirect()
+				{
+				window.location="C:/Users/sree%20vishnu/Copy/spring%202014/ASE/Exam/done.html";
+				}
+				</script>
+			
+				<style>
+				.custom{
+					width: 100px!important; margin: 0 auto;}
+				</style>
+			</form>
+			</div>
+			<div class="ui-block-c">
+			</div>
+		</div>
+		</div>
+</div>
+
+<div data-role="page" id="choosemap">
+	<div data-role="header" data-theme="c">
+		<a href="#createmap" data-icon="back">Back</a>
+		<h1>On the Way</h1>
+	</div>
+	<div data-role="content" >
+		<div class="ui-grid-b">
+			<div class="ui-block-a"></div>
+			<div class="ui-block-b">
+			<h2>Like the Place??</h2>
+			<button>Check In</button>
+			
+			</div>
+			</div class="ui-block-c"></div>
+		</div>
+	</div>
+ </div>
+ 
+  </body>
+</html>

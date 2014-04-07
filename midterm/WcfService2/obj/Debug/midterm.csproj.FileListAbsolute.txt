@@ -1,0 +1,6 @@
+c:\users\sree vishnu\documents\visual studio 2013\Projects\WcfService2\WcfService2\obj\Debug\midterm.csprojResolveAssemblyReference.cache
+c:\users\sree vishnu\documents\visual studio 2013\Projects\WcfService2\WcfService2\bin\WcfService2.dll.config
+c:\users\sree vishnu\documents\visual studio 2013\Projects\WcfService2\WcfService2\bin\WcfService2.dll
+c:\users\sree vishnu\documents\visual studio 2013\Projects\WcfService2\WcfService2\bin\WcfService2.pdb
+c:\users\sree vishnu\documents\visual studio 2013\Projects\WcfService2\WcfService2\obj\Debug\WcfService2.dll
+c:\users\sree vishnu\documents\visual studio 2013\Projects\WcfService2\WcfService2\obj\Debug\WcfService2.pdb
